@@ -1,0 +1,60 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: booking-deployment
+  labels:
+    app: booking 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: booking
+  template:
+    metadata:
+      labels:
+        app: booking
+    spec:
+      containers:
+      - name: booking
+        image: booking:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8080
+        env:
+        - name: carService
+          value: car-service
+        - name: paymentService
+          value: payment-service
+        - name: userService
+          value: user-service
+        - name: notificationService
+          value: notification-service
+        - name: DB_URL
+          valueFrom:
+              configMapKeyRef:
+                name: postgres-config
+                key: postgres-url
+        - name: DB_USER
+          valueFrom:
+            secretKeyRef:
+              name: postgres-secret
+              key : USER_NAME
+        - name: DB_PWD 
+          valueFrom:
+            secretKeyRef:
+              name: postgres-secret
+              key : PASSWORD
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: booking-service
+spec:
+  selector:
+    app: booking 
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080 
