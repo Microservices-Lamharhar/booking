@@ -1,4 +1,4 @@
-package com.microservices.booking;
+package com.microservice.bookingservice.dto;
 
 public class CarResponse {
   private String carId;
