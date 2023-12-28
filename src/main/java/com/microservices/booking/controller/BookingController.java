@@ -1,13 +1,8 @@
-package com.microservice.bookingservice.controller;
+package com.microservice.booking.controller;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-
-import com.microservice.bookingservice.repository.BookingRepository;
-import com.microservice.bookingservice.dto.CarResponse;
-import com.microservice.bookingservice.model.Booking;
-import com.microservice.bookingservice.service.IBookingService;
+import com.microservice.booking.dto.CarResponse;
+import com.microservice.booking.model.Booking;
+import com.microservice.booking.service.IBookingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;

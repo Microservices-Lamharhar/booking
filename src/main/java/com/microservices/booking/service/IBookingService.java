@@ -1,10 +1,8 @@
-package com.microservice.bookingservice.service;
+package com.microservice.booking.service;
 
-import com.microservice.bookingservice.model.Booking;
-import org.springframework.stereotype.Service;
+import com.microservice.booking.model.Booking;
 
 import java.util.List;
-import java.util.Optional;
 
 
 public interface IBookingService {

@@ -1,13 +1,12 @@
-package com.microservice.bookingservice.service.impl;
+package com.microservice.booking.service.impl;
 
-import com.microservice.bookingservice.model.Booking;
-import com.microservice.bookingservice.repository.BookingRepository;
-import com.microservice.bookingservice.service.IBookingService;
+import com.microservice.booking.model.Booking;
+import com.microservice.booking.repository.BookingRepository;
+import com.microservice.booking.service.IBookingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class BookingServiceImpl implements IBookingService {

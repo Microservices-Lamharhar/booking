@@ -1,6 +1,6 @@
-package com.microservice.bookingservice.repository;
+package com.microservice.booking.repository;
 
-import com.microservice.bookingservice.model.Booking;
+import com.microservice.booking.model.Booking;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

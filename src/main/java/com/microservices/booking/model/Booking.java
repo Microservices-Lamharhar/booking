@@ -1,4 +1,4 @@
-package com.microservice.bookingservice.model;
+package com.microservice.booking.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
